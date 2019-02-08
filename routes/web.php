@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/films'
+    ,function(){
+        $films = DB::table('films')->get();
+        return $films;
+    });
+Route::get('/films'
+    ,function(){
+        $films = DB::table('films')->get();
+        return view('films.index'
+            , compact('films'));
+    });
+Route::get('/films/{film}'
+    ,function($id){
+        $film = DB::table('films')->find($id);
+        return view('films.show'
+            , compact('film'));
+    });
