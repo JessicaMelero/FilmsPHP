@@ -25,4 +25,8 @@ class FilmsController extends Controller
         return view('films.show'
             ,compact('film'));
     }
+
+    public function create(){
+        return view('films.add');
+    }
 }

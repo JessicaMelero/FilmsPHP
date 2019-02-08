@@ -13,8 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    <button class="btn btn-primary"><a href="/films" class="text-white">All Films</a></button>
+                    <div class="row justify-content-around">
+                        <button class="btn btn-primary"><a href="/films" class="text-white">All Films</a></button>
+                        <button class="btn btn-success"><a href="/addFilm" class="text-white">Add Film</a></button>
+                        <button class="btn btn-danger"> Delete Film</button>
+                    </div>
                 </div>
             </div>
         </div>

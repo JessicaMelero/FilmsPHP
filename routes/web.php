@@ -22,8 +22,13 @@ Route::get('/films'
     });
 Route::get('/films',
     'FilmsController@index');
-Route::get('/films/{film}'
-    ,'FilmsController@show');
+
+Route::get('/films/{film}',
+    'FilmsController@show');
+
+Route::get('/addFilm',
+    'FilmsController@create');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
