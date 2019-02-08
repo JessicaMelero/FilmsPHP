@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <button class="btn btn-primary"><a href="/films" class="text-white">All Films</a></button>
                 </div>
             </div>
         </div>
