@@ -18,8 +18,6 @@
                 <p class="text-center">{{$film->description}}</p>
             </div>
         </div>
-
     </div>
-
 </body>
 </html>
