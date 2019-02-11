@@ -14,9 +14,9 @@
                         </div>
                     @endif
                     <div class="row justify-content-around">
-                        <button class="btn btn-primary"><a href="/films" class="text-white">All Films</a></button>
-                        <button class="btn btn-success"><a href="/addFilm" class="text-white">Add Film</a></button>
-                        <button class="btn btn-danger"> Delete Film</button>
+
+                        <a href="/films" class="text-white"><button class="btn btn-primary">All Films</button></a>
+                        <a href="/addFilm" class="text-white"><button class="btn btn-success">Add Film</button></a>
                     </div>
                 </div>
             </div>

@@ -8,12 +8,20 @@
     <title>Laravel</title>
 </head>
 <body>
+    <header class="container-fluid">
+        <a href="/home" class="text-dark mr-auto"><strong>Home</strong></a>
+    </header>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-around ">
             @foreach ($films as $film)
                 <div class="card w-25 m-1">
                     <div class="card-header">
                         <h2>{{$film->title}} ({{$film->year}})</h2>
+
+                            <a href="/delete" class="btn btn-danger text-white">Delete</a>
+
+                            <a href="/edit" class="btn btn-secondary text-white">Edit</a>
+
                     </div>
                     <div class="card-body">
                         <p>{{$film->description}}</p>

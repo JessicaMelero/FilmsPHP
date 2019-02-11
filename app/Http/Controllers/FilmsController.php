@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Films;
-
+use Illuminate\Http\Request;
 
 class FilmsController extends Controller
 {
@@ -27,6 +27,27 @@ class FilmsController extends Controller
     }
 
     public function create(){
+
         return view('films.add');
+    }
+
+    public function store(Request $request){
+        //Validacion formulario
+        $validatedData = $this ->validate($request, [
+            'title' => 'required',
+            'year' => 'required',
+            'description' => 'required'
+        ]);
+        $film = new Films;
+        $film->title = $validatedData['title'];
+        $film->year = $validatedData['url'];
+        $film->description = $validatedData['description'];
+        $film->save();
+        return redirect('/films');
+    }
+
+    public function destroy($id){
+        $film = Films::find($id);
+        $film->delete();
     }
 }
