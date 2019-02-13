@@ -23,14 +23,14 @@
             <h2 class="text-center">Add a new film</h2>
             <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                 <label>Title</label>
-                <input type="text" class="form-control" id="title" placeholder="Enter a title" value="{{ old('title') }}"/>
+                <input type="text" class="form-control" name="title" placeholder="Enter a title" value="{{ old('title') }}"/>
                 @if($errors->has('title'))
                     <span class="help-block">{{ $errors->first('title') }}</span>
                 @endif
             </div>
             <div class="form-group{{ $errors->has('year') ? ' has-error' : '' }}">
                 <label>Year</label>
-                <input type="text" class="form-control" id="year" placeholder="Enter a year" value="{{ old('year') }}"/>
+                <input type="text" class="form-control" name="year" placeholder="Enter a year" value="{{ old('year') }}"/>
                 @if($errors->has('year'))
                     <span class="help-block">{{ $errors->first('year') }}</span>
                 @endif
@@ -38,7 +38,7 @@
             <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
                 <label>Description</label>
                 <br>
-                <textarea type="text" class="form-control w-100" id="description" placeholder="Enter a description" value="{{ old('title') }}"></textarea>
+                <textarea type="text" class="form-control w-100" name="description" placeholder="Enter a description">{{ old('description') }}</textarea>
                 @if($errors->has('description'))
                     <span class="help-block">{{ $errors->first('description') }}</span>
                 @endif

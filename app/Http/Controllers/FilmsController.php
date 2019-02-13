@@ -33,14 +33,14 @@ class FilmsController extends Controller
 
     public function store(Request $request){
         //Validacion formulario
-        $validatedData = $this ->validate($request, [
+        $validatedData = $this->validate($request, [
             'title' => 'required',
             'year' => 'required',
             'description' => 'required'
         ]);
         $film = new Films;
         $film->title = $validatedData['title'];
-        $film->year = $validatedData['url'];
+        $film->year = $validatedData['year'];
         $film->description = $validatedData['description'];
         $film->save();
         return redirect('/films');
